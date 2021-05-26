@@ -1,5 +1,6 @@
-# Bahmni Automation
+# Login Page Test
 
-
-## Login to the application
-* Login
+## Should able to login with valid credentials
+* Goto Website
+* Enter valid Username, Password and Location
+* Click on Login button
