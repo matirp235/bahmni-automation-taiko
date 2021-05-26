@@ -17,9 +17,13 @@ const {
     text,
     into,
     textBox,
-    evaluate
+    evaluate,
+    dropDown,
+    button,
+    waitFor
 } = require('taiko');
 const assert = require("assert");
+const locators = require('./locators');
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
@@ -43,48 +47,24 @@ gauge.customScreenshotWriter = async function () {
     return path.basename(screenshotFilePath);
 };
 
-step("Add task <item>", async (item) => {
-    await write(item, into(textBox("What needs to be done?")));
-    await press('Enter');
-});
+step('Login and Goto Operation Theatre Page',async() =>{
+    //Goto Application
+    goto("https://qa-amman.ehealthunit.org/bahmni/home/index.html#/login");
 
-step("View <type> tasks", async function (type) {
-    await click(link(type));
-});
+    //Enter Login Details
+    await write("superman",into(textBox({placeholder: locators.Details.Username})));
+    await write("Admin123",into(textBox({placeholder: locators.Details.Password})));
+    await dropDown('Location').select({index:'3'});
+    await waitFor(1000);
+    await click(button("Login"));
 
-step("Complete tasks <table>", async function (table) {
-    for (var row of table.rows) {
-        await click(checkBox(toLeftOf(row.cells[0])));
-    }
-});
+    //Verify Home Page
+    assert.ok(await text('OPD').exists());
 
-step("Clear all tasks", async function () {
-    await evaluate(() => localStorage.clear());
-});
+    //Go to Operation Theatre
+    await click("Operation Theatre");
 
-step("Open todo application", async function () {
-    await goto("todo.taiko.dev");
-});
-
-step("Must not have <table>", async function (table) {
-    for (var row of table.rows) {
-        assert.ok(!await text(row.cells[0]).exists(0, 0));
-    }
-});
-
-step("Must display <message>", async function (message) {
-    assert.ok(await text(message).exists(0, 0));
-});
-
-step("Add tasks <table>", async function (table) {
-    for (var row of table.rows) {
-        await write(row.cells[0]);
-        await press('Enter');
-    }
-});
-
-step("Must have <table>", async function (table) {
-    for (var row of table.rows) {
-        assert.ok(await text(row.cells[0]).exists());
-    }
-});
+    //Verify OT Page
+    //await waitFor(3000);
+    assert.ok(await text('Surgical Queues').exists());
+})
