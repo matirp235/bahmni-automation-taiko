@@ -1,5 +1,6 @@
 # Bahmni Automation
 
+
 //## TC001 - Add New Surgical Block
 //* Login and Goto Operation Theatre Page
 //* Adding new surgical block
@@ -34,14 +35,14 @@
 ## Verify postponing feature
 * Verify postponing feature
 
-## Verification Of Calender View
+## TC002 - Verification Of Calender View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Click on List View
 * Click on Calendar
 * Verification of calendar view
 
-## Verification of Filter Functionality
+## TC005 -  Verification of Filter Functionality
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Click on List View
@@ -50,7 +51,7 @@
 * Enter Patient Name
 * Verification of Filter Functionality
 
-## Editing the Existing Surgery
+## TC007 -  Editing the Existing Surgery
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Clicking on the surgery
@@ -66,7 +67,7 @@
 * Enter Patient Name
 * Verification of Editing the surgery
 
-## Moving the existing Surgery
+## TC009 - Moving the existing Surgery
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Clicking on the surgery
@@ -78,7 +79,7 @@
 * Click on Move Button on move popup
 
 
-## Postponing the existing Surgery
+## TC011 - Postponing the existing Surgery
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Clicking on surgery
@@ -96,7 +97,7 @@
 * Enter Postpone status
 * Verification of Postponing the surgery
 
-## Cancelling the existing Surgery
+## TC013 - Cancelling the existing Surgery
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Clicking on Surgery which we want to cancel
@@ -114,7 +115,7 @@
 * Enter Cancel status
 * Verification of Cancelling the surgery
 
-## Adding actual Time
+## TC020 - Adding actual Time
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Clicking on Surgery where we want to add actual time
@@ -124,21 +125,15 @@
 * Click on add in add time popup
 * Verification of adding actual time
 
-## Verification of Day View
+## TC027 - Verification of Day View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Verification of the Day View
 
-## Verification of Week View
+## TC028 - Verification of Week View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Click on week Button
 * Verification of the week View
-
-## Verification of navigation to next day View
-* Login and Goto Operation Theatre Page
-* Goto OT Scheduling
-* Click on next button
-* Verification of the next day View
 
 
