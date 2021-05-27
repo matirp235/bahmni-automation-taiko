@@ -28,7 +28,8 @@ const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
     await openBrowser({
-        headless: headless
+        headless: headless , 
+        args: ["--start-fullscreen"]
     })
 });
 
@@ -46,6 +47,7 @@ gauge.customScreenshotWriter = async function () {
     });
     return path.basename(screenshotFilePath);
 };
+
 
 step('Login and Goto Operation Theatre Page',async() =>{
     //Goto Application
