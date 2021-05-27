@@ -1,4 +1,16 @@
 # Bahmni Automation
+## Verification of List View
+* Login and Goto Operation Theatre Page
+* Goto OT Scheduling Page
+* Verify Edit OT feature in List View
+* Goto OT Scheduling Page
+* Verify the Move feature of OT
+* Goto OT Scheduling Page
+* Verify postponing feature
+* Goto OT Scheduling Page
+* Verify Cancelling Feature
+
+
 
 
 //## TC001 - Add New Surgical Block
@@ -25,12 +37,10 @@
 //* Login and Goto Operation Theatre Page
 //* Move surgery to existing slot
 
+
 //## TC019 - Moving a surgery to a non-existing surgery slot
 //* Login and Goto Operation Theatre Page
 //* Move surgery to non-existing slot
-
-## Verify_OT_list page
-* Verify_OT_list page
 
 ## Verify postponing feature
 * Verify postponing feature
