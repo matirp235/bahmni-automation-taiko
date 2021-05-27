@@ -109,6 +109,13 @@ step("Open List View", async () =>{
     await click(listView);
     var btn = $(".back-btn");
     await click(btn);
+    //
     // var print = waitFor($('.print-list'));
     // await click(print);
+});
+
+step("Check Patient", async() =>{
+    await click("Bed Management");
+    await click(link(below('Identifier')));
+
 });
