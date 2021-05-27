@@ -8,6 +8,7 @@ const {
     goto,
     press,
     screenshot,
+    toRightOf,
     above,
     click,
     checkBox,
@@ -124,5 +125,23 @@ step("Open List View", async () =>{
 step("Check Patient", async() =>{
     await click("Bed Management");
     await click(link(below('Identifier')));
+    const AdmitButton = await button('Admit').isDisabled();
+    const dischargeButton = button('Discharge',toRightOf(text('Transfer',below('Reason for Change in EDD')))).isVisible();
 
+    if(AdmitButton){
+        console.log("Validation Successful")
+    }
+    else {
+        console.log("Validation Unsuccessful")
+    }
+
+    if(dischargeButton){
+        console.log("Discharge button is enabled. Validation successful")
+    }
+    else{
+        console.log("Validation Unsuccessful")
+    }
+    await waitFor(3000);
+    var btn = $(".back-btn");
+    await click(btn);
 });
