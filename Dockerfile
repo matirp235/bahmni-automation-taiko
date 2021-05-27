@@ -52,3 +52,4 @@ RUN npm install -g @getgauge/cli \
 
 # Default command on running the image
 ENTRYPOINT ["npm", "test"]
+
