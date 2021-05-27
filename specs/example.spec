@@ -1,16 +1,32 @@
 # Bahmni Automation
 
-
-
-## Add New Surgical Block
-* Login and Goto Operation Theatre Page
-//## Add New Surgical Block
+//## TC001 - Add New Surgical Block
 //* Login and Goto Operation Theatre Page
 //* Adding new surgical block
 
-//## Add New surgery
+//## TC004 - Add New surgery
 //* Login and Goto Operation Theatre Page
 //* Adding new surgery
+
+//## TC006 - Editing Surgical Block
+//* Login and Goto Operation Theatre Page
+//* Edit the Surgical block
+
+//## TC015 - Postponing Surgical Block
+//* Login and Goto Operation Theatre Page
+//* Postpone the surgical block
+
+//## TC016 - Cancelling Surgical Block
+//* Login and Goto Operation Theatre Page
+//* Cancel the surgical block
+
+//## TC018 - Moving a surgery to an existing surgery slot
+//* Login and Goto Operation Theatre Page
+//* Move surgery to existing slot
+
+//## TC019 - Moving a surgery to a non-existing surgery slot
+//* Login and Goto Operation Theatre Page
+//* Move surgery to non-existing slot
 
 ## Verify_OT_list page
 * Verify_OT_list page
