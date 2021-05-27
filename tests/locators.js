@@ -21,6 +21,12 @@ class locators {
             PostponeButtonID: 'postpone-button',
 
         }
+        this.ListView = {
+            postpone_message: 'enter reason',
+            moveDate: 'dd/mm/yyyy',
+            cancel_message: 'enter reason'
+
+        }
     }
 }
 module.exports = new locators();

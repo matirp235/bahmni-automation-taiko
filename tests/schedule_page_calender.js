@@ -38,18 +38,14 @@ step('Goto OT Scheduling',async() =>{
     await click('OT Scheduling')
 })
 step('Click on List View',async() =>{
-    await waitFor(2000);
-  
   await evaluate(() => document.getElementById('list-view-button').click());
-
   await waitFor(3000);
-  
 })
 step('Click on Calendar',async() =>{
     await evaluate(() => document.getElementById('calendar-button').click());
 })
 step('Verification of calendar view',async()=>{
-    assert.ok(await text('10:00 am').exists());
+    assert.ok(await text(locators.ScheduleCalenderDetails.time).exists());
 })
 step('Selecting only OT 3',async()=>{
 
@@ -58,13 +54,13 @@ step('Selecting only OT 3',async()=>{
 
 })
 step('Enter Surgeon Name',async()=>{
-    await write("Ashraf Bustanji",into(textBox({placeholder: "Enter Surgeon Name"})));
+    await write(locators.ScheduleCalenderDetails.surgeon1,into(textBox({placeholder: locators.ScheduleCalenderDetails.surgeonNamePlaceHolder})));
     await press('Enter')
 })
 step('Enter Patient Name',async()=>{
-   await write("IQ300",into(textBox({placeholder: "Enter Patient ID/ Name"})));
+   await write(locators.ScheduleCalenderDetails.patient1ID,into(textBox({placeholder: locators.ScheduleCalenderDetails.PatientNamePlaceHolder})));
     await waitFor(1000);
-    await click('2FFFF788 2FFFF78E (IQ300)');
+    await click(locators.ScheduleCalenderDetails.Patient1NameID);
  
 })
 step('Enter Status',async()=>
@@ -78,7 +74,7 @@ step('Enter Status',async()=>
  step('Verification of Filter Functionality' , async()=>
 {
 
- assert.ok(await text("2FFFF788 2FFFF78E " , below("Patient Name")).exists());
+ assert.ok(await text(locators.ScheduleCalenderDetails.Patient1Name , below("Patient Name")).exists());
 assert.equal(await text("22FFFF87A 2FFFF87F ").exists(0,0),false)
 
  }
@@ -132,7 +128,7 @@ step('Verification of Move Popup' , async()=>
 step('Clicking on surgery',async()=>
 {
     await waitFor(3000)
-await click(text('0037642 30037647 ( IQ1202 )'));
+await click(text(locators.ScheduleCalenderDetails.Patient2NameID));
 
 })
 
@@ -165,7 +161,7 @@ await click(button('Confirm'));
 await waitFor(1000);
 })
 step('Enter Postpone Patient Name',async()=>{
-    await write("IQ1202",into(textBox({placeholder: "Enter Patient ID/ Name"})));
+    await write(locators.ScheduleCalenderDetails.patient2ID,into(textBox({placeholder: "Enter Patient ID/ Name"})));
      await waitFor(1000);
      await click('30037642 30037647 (IQ1202)');
  })
@@ -248,17 +244,12 @@ step('Verification of the week View',async()=>{
     assert.ok(await text("23 May 2021, Sun to 29 May 2021, Sat").exists());
     await waitFor(2000)
 })
-step('Click on next button',async()=>
-{
-    //await evaluate(() => document.getElementsByName('fa fa-angle-right').click());
-   // await evaluate(() => document.getElementsByClassName /html/body/div[3]/div[3]/p[2]/button[3]/i
-   //await evaluate(() => document.getElementById('button[3]').click());
-  // await click('>');
-    await waitFor(2000) 
-  //  /html/body/div[3]/div[3]/p[2]/button[3]/i
-  //  body > div:nth-child(3) > div.ot-top-button-wrapper > p:nth-child(2) > button:nth-child(3) > i
-    //i[@class='fa fa-angle-right']
-})
+// step('Click on next button',async()=>
+// {
+//   await waitFor(1000);
+//     await evaluate(() => document.getElementsByClassName('calendar-day-navigation').click());
+//   await waitFor(1000);
+// })
 
 step('Verification of the next day View',async()=>{
     assert.ok(await text("28 May 2021, Fri").exists());
@@ -286,3 +277,4 @@ step('Click on Move Button on move popup', async()=>
  await click(button("Move"))
     await waitFor(1000);
 })
+
