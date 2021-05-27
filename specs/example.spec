@@ -4,13 +4,26 @@
 
 ## Add New Surgical Block
 * Login and Goto Operation Theatre Page
+//## Add New Surgical Block
+//* Login and Goto Operation Theatre Page
+//* Adding new surgical block
+
+//## Add New surgery
+//* Login and Goto Operation Theatre Page
+//* Adding new surgery
+
+## Verify_OT_list page
+* Verify_OT_list page
+
+## Verify postponing feature
+* Verify postponing feature
 
 ## Verification Of Calender View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
 * Click on List View
 * Click on Calendar
-* Verification of calendar view 
+* Verification of calendar view
 
 ## Verification of Filter Functionality
 * Login and Goto Operation Theatre Page
