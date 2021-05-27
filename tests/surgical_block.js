@@ -99,8 +99,8 @@ step('Adding new surgery',async() =>{
      await dropDown(below(text("Step 1 - Create surgical block"))).select({index:'2'});
      await waitFor(2000);
      await click("OT 2"); 
-     await timeField(toRightOf(text('Start Date-time'))).select(new Date(locators.Details.start_date_time));
-     await timeField(toRightOf(text('End Date-time'))).select(new Date(locators.Details.end_date_time));
+     //await timeField(toRightOf(text('Start Date-time'))).select(new Date(locators.Details.start_date_time));
+     //await timeField(toRightOf(text('End Date-time'))).select(new Date(locators.Details.end_date_time));
      await waitFor(2000);
 
 
@@ -180,7 +180,7 @@ step('Adding new surgery',async() =>{
 
       //Adding form Details
       await click("Move");
-      await timeField(toRightOf(text('Date:'))).select(new Date('2021-06-02'));
+      await timeField(toRightOf(text('Date:'))).select(new Date('2021-06-03'));
       await waitFor(2000);
       
       //Verify error message
