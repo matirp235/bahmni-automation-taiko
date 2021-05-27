@@ -51,7 +51,8 @@ gauge.customScreenshotWriter = async function () {
 
 step('Login and Goto Operation Theatre Page',async() =>{
     //Goto Application
-    goto("https://qa-amman.ehealthunit.org/bahmni/home/index.html#/login");
+    await goto("https://qa-amman.ehealthunit.org/bahmni/home/index.html#/login", {waitForStart:2000});
+
 
     //Enter Login Details
     await write("superman",into(textBox({placeholder: locators.Details.Username})));
@@ -59,13 +60,16 @@ step('Login and Goto Operation Theatre Page',async() =>{
     await dropDown('Location').select({index:'3'});
     await waitFor(1000);
     await click(button("Login"));
+    await waitFor(2000);
 
     //Verify Home Page
     assert.ok(await text('OPD').exists());
+    await waitFor(2000);
 
     //Go to Operation Theatre
     await click("Operation Theatre");
-
+    await waitFor(2000);
+    
     //Verify OT Page
     //await waitFor(3000);
     assert.ok(await text('Surgical Queues').exists());
