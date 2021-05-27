@@ -60,7 +60,9 @@ step("Enter valid Username, Password and Location", async () => {
 step("Click on Login button", async () => {
     await click("Login", below("Location"));
 });
+//goto bed management
 step("Bed Management",async()=>{
+    //
         await click("Bed Management");
         await click("Bed Management");
         await click("Rehabilitation Center");
@@ -68,13 +70,15 @@ step("Bed Management",async()=>{
         total.then(function (result){
             console.log(result)
         })
-
-    //go to home page
+    //
     var btn = $(".back-btn")
     await click(btn);
+        //
 });
 
+//goto edit tags
 step("Edit tags", async () =>{
+    //
     await click("Bed Management");
     await click("Bed Management");
     await click("Rehabilitation Center");
@@ -94,6 +98,7 @@ step("Edit tags", async () =>{
         await press('Enter');
 
     }
+    //
     await click('Update');
     var validation = text('Isolation',toLeftOf('Edit')).exists();
     await assert.ok(validation);
