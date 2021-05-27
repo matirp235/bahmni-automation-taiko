@@ -1,11 +1,19 @@
 # Bahmni Automation
-## Add New Surgical Block
+## Verification of List View
 * Login and Goto Operation Theatre Page
-
-
-* Verify_OT_list page
-
+* Goto OT Scheduling Page
+* Verify Edit OT feature in List View
+* Goto OT Scheduling Page
+* Verify the Move feature of OT
+* Goto OT Scheduling Page
 * Verify postponing feature
+* Goto OT Scheduling Page
+* Verify Cancelling Feature
+
+
+
+
+
 ## Verification Of Calender View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling
