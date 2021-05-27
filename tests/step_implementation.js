@@ -51,7 +51,8 @@ gauge.customScreenshotWriter = async function () {
 
 step('Login and Goto Operation Theatre Page',async() =>{
     //Goto Application
-    goto("https://qa-amman.ehealthunit.org/bahmni/home/index.html#/login");
+    await goto("https://qa-amman.ehealthunit.org/bahmni/home/index.html#/login", {waitForStart:2000});
+
 
     //Enter Login Details
     await write("superman",into(textBox({placeholder: locators.Details.Username})));
