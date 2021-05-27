@@ -69,6 +69,7 @@ step("Bed Management",async()=>{
             console.log(result)
         })
 
+    //go to home page
     var btn = $(".back-btn")
     await click(btn);
 });
@@ -98,6 +99,7 @@ step("Edit tags", async () =>{
     await assert.ok(validation);
     var btn = $(".back-btn")
     await click(btn);
+    //
 });
 
 step("Open List View", async () =>{
