@@ -73,3 +73,11 @@ step('Login and Goto Operation Theatre Page',async() =>{
     //await waitFor(3000);
     assert.ok(await text('Surgical Queues').exists());
 })
+
+step('Goto OT Scheduling',async() =>{
+    await click('OT Scheduling')
+
+    //Verify OT Scheduling Page
+    await waitFor(2000);
+    assert.ok(await text('Operation Theatre').exists());
+})

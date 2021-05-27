@@ -33,9 +33,7 @@ const { setPriority } = require('os');
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 
-step('Goto OT Scheduling',async() =>{
-    await click('OT Scheduling')
-})
+
 step('Click on List View',async() =>{
     await waitFor(2000);
   
