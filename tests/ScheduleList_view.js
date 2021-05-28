@@ -59,7 +59,7 @@ step('Verify Edit OT feature in List View',async() =>{
     await write("Other Surgeon Not Available",into(textBox({placeholder: 'enter your notes'})));
     await click ("Add")
     await click ("Save")
-    assert.ok()
+    //assert.ok()
 
 })
 

@@ -1,4 +1,5 @@
 # Bahmni Automation
+
 ## Verification of List View
 * Login and Goto Operation Theatre Page
 * Goto OT Scheduling Page
@@ -9,8 +10,6 @@
 * Verify postponing feature
 * Goto OT Scheduling Page
 * Verify Cancelling Feature
-
-
 
 ## TC001,TC023,TC025 & TC026 - Add New Surgical Block & Verify New Surgical Block button
 * Login and Goto Operation Theatre Page
